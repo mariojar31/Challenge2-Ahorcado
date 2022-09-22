@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>El Ahorcado</title>
+        <link rel="icon" href="imagenes/icon.png">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+    </head>
+    <body>
+        <header>
+
+        </header>
+
+        <main>
+            <audio class="soundtrack" preload="auto" src="Audios/fondo.mp3" autoplay="true" loop="true"></audio>
+            
+            <section class="menu">
+                <video class="videoAhorcado" src="videos/Ahorcadofondo.mp4" autoplay muted loop width="100%"></video>
+                <video class="videoAhorcado-movil" src="videos/Ahorcado-fondo-movil.mp4" autoplay muted loop width="100%"></video> 
+                <div class="menuInicial">
+                    <img src="imagenes/El Ahorcado.png" class="tituloJuego">
+                    <img src="imagenes/aud-02.png" class="audIcon" id="audIcon" onclick="muteOn()">
+                    <img src="imagenes/muted-02.png" class="audIcon" id="muteIcon" onclick="muteOff()">
+                    <div class="botonesInicial">
+                        <button class="boton" id="boton1" onclick="iniciarJuego()" >Iniciar Juego</button>
+                        <button class="boton" id="boton2" onclick="agregarPalabra()" >Agregar Palabra</button>      
+                    </div>                    
+                </div>
+            </section>
+
+            <section class="juego">
+                <div class="fondojuego">
+                    <video class="videoFondo" src="videos/fondo-sin-ahorcado.mp4" autoplay muted loop></video>   
+                    <video class="videoFondo-movil" src="videos/fondo-sin-ahorcado-movil.mp4" autoplay muted loop></video>                    
+                </div>
+                <div class="plantilla">
+                    <p class="text" id="intentosRestantes"></p>                  
+                    <img src="imagenes/Rectángulo 3.png" id="cuadrofondo">
+                    
+                </div>
+                <div class="dibujo">
+                    <img src="imagenes/muñeco0.png" class="img0">
+                    <img src="imagenes/muñeco1.png" class="img1">
+                    <img src="imagenes/muñeco2.png" class="img2">
+                    <img src="imagenes/muñeco3.png" class="img3">
+                    <img src="imagenes/muñeco4.png" class="img4">
+                    <img src="imagenes/muñeco5.png" class="img5">
+                    <img src="imagenes/celebrando.png" class="img7">
+                    <div class="img6">
+                        <video src="videos/AhorcadoFin.mp4" id="videoPerdiste" autoplay muted loop></video>
+                        <p class="palabraPerdiste">¡PERDISTE!</p>
+                    </div>
+                </div>
+
+                <div class="botones2">
+                    <img id="botonRepetir" src="imagenes/repetir-03.png" onclick="btnRepetir()">
+                    <img id="botonMenu" src="imagenes/menu.png" onclick="irMenu()">
+                </div>
+                <div class="rayaspalabras">
+                    <div class="palabra">
+                        <ol class="letras">
+                        </ol>
+                    </div>
+                    <div class="letrasIncorrectas">
+                        <p class="incorreto">Incorrectas: </p>
+                    </div>
+                    <div class="teclado">
+                        <ol class="teclas">
+        
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="rayasLetras" class="canvas">
+                    <!-- Canvas -->
+                    <canvas id="ahorcado" width="600" height="200"></canvas>
+                </div>
+
+            </section>
+            
+            <section class="nuevaPalabra">
+                <img src="imagenes/Rectángulo ap-01.png" id="cuadrofondoPalabra">
+                <div class="areaNuevapalabra">
+                    <h1 id="tituloNp">Agregar Nueva Palabra</h1>
+                    <label class="indicacion" for="nuevaPalabra">Max. 8 caracteres</label>
+                    <br/>
+                    <input type="text" name="nuevaPalabra" id="addPalabra" placeholder="Ingrese una palabra" maxlength="8" pattern="[A-Za-z]{1,8}" oninput="isOk(this);"/>
+                    <div class="botonesNuevap">
+                        <button class="btnNuevaPalabra" id="guardar" onclick="btnGuardar();">Guardar</button>
+                        <button class="btnNuevaPalabra" id="cancelar" onclick="btnCancelar();">Cancelar</button>
+                    </div>
+                </div>  
+            </section> 
+        </main>
+        
+        <footer>
+            <div class="logosfoot">
+                <a href="https://github.com/mariojar31"> <img src="imagenes/git.png" id="logogit"></a>
+                <a href="https://www.linkedin.com/in/mario-acendra/"><img src="imagenes/linkedin.png" id="logolinked"></a>
+                
+                <div class="footertext">
+                    <p>Developed & Designed By:</p>
+                    <p>Mario Acendra</p>
+                    <p>Alura - Oracle ONE</p>
+                </div>
+                
+            </div>
+        </footer>
+        <script src="script.js"></script>
+        
+    </body>
+</html>
+

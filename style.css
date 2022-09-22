@@ -1,0 +1,582 @@
+/*Página de Inicio*/
+
+body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: black;
+}
+
+
+.videoAhorcado{
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+}
+
+.videoAhorcado-movil{
+    display: none;
+}
+
+.menuInicial{
+    text-align: center;
+    position: relative;
+    vertical-align: middle;
+    padding-top: 15vw;
+}
+
+.tituloJuego{
+    width: 45vw;
+    position: relative;
+    text-align: center;
+}
+
+.botonesInicial{
+    margin-top: 2vw;
+    display: grid;
+    position: relative;
+    justify-items: center;
+
+}
+
+.boton{
+    width: 30vw;
+    padding: 0.4vw 3vw;
+    border-radius: 20px;
+    border-style: none;
+    margin-top: 10px;
+    background-color: rgb(145, 143, 143, 0.4);
+    font-family: "Palatino LT";
+    color: #FFFFFF;
+    font-size:2vw;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.boton:hover{
+    font-weight: bold;
+    border-color: gray;
+    border-width: 2px;
+}
+
+/*Pie de página*/
+footer{
+    text-align: center;
+}
+
+.logosfoot{
+    display: inline-block;
+    margin-top: 4vw;
+}
+
+.footertext{
+    color: #918F8F;
+    margin-top: 1vw;
+    font-size: 1vw;
+}
+
+#logogit,#logolinked{
+    width: 2vw;
+}
+
+/*Página Juego*/
+
+.juego{
+    width: 100vw;
+    display: none;
+}
+
+.fondojuego{
+    z-index: -1;
+    position: fixed;
+}
+
+.videoFondo-movil{
+    display: none;
+}
+
+.plantilla{
+    display: inline-flex;
+    position: relative;
+    z-index: 1;
+    top: 3vw;
+}
+
+.text{
+    position: absolute;
+    top: 10vw;
+    margin-left: 20px;
+    font-size: 1.8vw;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+#cuadrofondo{
+    width: 70vw;
+    height: 37vw;
+    padding-left: 20vw;
+    padding-top: 1vw;
+}
+
+.dibujo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.img0,.img1,.img2,.img3,.img4,.img5,.img6,.img7{
+    position: absolute;
+    z-index: 2;
+    width: 20vw;
+    top: 7vw;
+    left: 45vw;
+    display: none;
+    
+}
+
+.img0{
+    display: block;
+}
+
+.img6{
+    text-align: center;
+    position: absolute;
+    left: 25vw;
+    top: 5vw;
+    width: 40vw;
+}
+
+
+
+.img7{
+    width: 40vw;
+    top: 0;
+    left: 32vw;
+}
+
+#videoPerdiste{
+    width: 20vw;
+    left: 20vw;
+    top: 3vw;
+    position: absolute;
+    border-radius: 3vw;
+    border-style: none;
+    opacity: 0.98;
+}
+
+
+.canvas{
+    position: absolute;
+    margin-left: 25vw;
+    width: 50vw;
+    height:13vw;
+    top: 30vw;
+    z-index: 3;
+  }
+
+  #ahorcado{
+    width: 50vw;
+    height:20vw;
+    display: none;
+  }
+
+  .palabra {
+    text-align: center;
+    width: 70vw;
+    height:8vw;
+    position: absolute;
+    top: 30vw;
+    left: 20vw;
+    z-index: 4;
+}
+.letras{
+    font-family: "Palatino LT";
+    font-weight: bold;
+    font-size: 250%;
+    color: #ffffff;
+    width: 50%;
+    padding: 2% 25% 0.5% 25%;
+}
+.letra{
+    display: inline-block;
+    text-align: center;
+    width: 10%;
+    height:100%; 
+}
+.letra p{
+    margin-bottom:2%;
+
+}
+.lineaLetra{
+    display: flex;
+    height:4px;
+}
+
+.teclado{
+    display: none;
+}
+
+.letrasIncorrectas{
+    position: absolute;
+    width: 25vw;
+    top: 36vw;
+    left: 42vw;
+    z-index: 4;
+    color: rgb(199, 199, 199);
+    text-align: center;
+    font-weight: bold;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.palabraPerdiste{
+    position: absolute;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size:3vw;
+    left: 21.5vw;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.botones2{
+    text-align: center;
+    position: absolute;
+    top: 5vw;
+    left: 76vw;
+    z-index: 2;
+    display: flex;
+}
+
+#botonRepetir, #botonMenu {
+    margin: 0 0;
+}
+
+#botonRepetir:hover, #botonMenu:hover {
+  scale: 1.1;
+  opacity: 0.9;
+}
+
+/*ICONO MUTE EN MENU*/
+
+.audIcon{
+    opacity: 0.5;
+    width: 4vw;
+    position: absolute;
+    left: 49vw;
+    top: 24vw;
+    transition: all 1s;
+}
+
+.audIcon:hover{
+    width: 4.3vw;
+    opacity: 1;
+}
+
+#muteIcon{
+    display: none;
+}
+
+
+/*Página Agregar Palabra*/
+
+#cuadrofondoPalabra{
+    width: 70vw;
+    height: 33vw;
+    padding-top: 1vw;
+    z-index: 2;
+    top: 4vw;
+    position: absolute;
+    left: 15vw;
+}
+
+.areaNuevapalabra{
+    margin: 10vw 20vw;
+    width: 60vw;
+    height: 25vw;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    text-align: center;
+}
+
+.nuevaPalabra{
+    display: none;
+}
+
+#tituloNp{
+    font-size: 4vw;
+    color: #FFFFFF;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    margin-bottom: 2vw;
+}
+
+.btnNuevaPalabra{
+    width: 20vw;
+    padding: 0.4vw 3vw;
+    border-radius: 20px;
+    border-style: none;
+    background-color: rgba(114, 113, 113, 0.719);
+    font-family: "Palatino LT";
+    color: #FFFFFF;
+    font-size:2vw;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    margin-top: 2vw;
+}
+
+.indicacion{
+    font-size: 2vw;
+}
+
+#addPalabra{
+    font-size: 3vw;
+    margin: 2vw 0;
+    padding: 1vw 3vw;
+    border-style: none;
+    border-radius: 3vw;
+    background-color: #C2C2C2;
+    width: auto;
+}
+
+@media screen and (max-width:610px){
+
+    /*Página de Inicio*/
+
+
+    .videoAhorcado{
+     display: none;
+    }
+    
+    .videoAhorcado-movil{
+        display: block;
+        position: fixed;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .tituloJuego{
+        width: 75vw;
+        position: relative;
+        text-align: center;
+        top: 60vw;
+    }
+
+    .botonesInicial{
+        margin-top: 2vw;
+        display: grid;
+        position: relative;
+        justify-items: center;
+        top: 65vw;
+    
+    }
+    
+    .boton{
+        width: 70vw;
+        padding: 1vw 4vw;
+        border-radius: 20px;
+        border-style: none;
+        margin-top: 10px;
+        background-color: rgb(145, 143, 143, 0.4);
+        font-family: "Palatino LT";
+        color: #FFFFFF;
+        font-size:6vw;
+        text-shadow: black 0.1em 0.1em 0.2em;
+        
+    }
+    
+    .boton:hover{
+        font-weight: bold;
+        border-color: gray;
+        border-width: 2px;
+    }
+
+    /*Pie de página*/
+footer{
+    text-align: center;
+    position: absolute;
+    top: calc(150vw);
+    left: 28vw;
+}
+
+.logosfoot{
+    display: inline-block;
+    margin-top: 4vw;
+}
+
+.footertext{
+    color: #918F8F;
+    margin-top: 1vw;
+    font-size: 4vw;
+}
+
+#logogit,#logolinked{
+    width: 7vw;
+}
+
+/*PANTALLA JUEGO*/
+
+
+
+.text{
+    position: relative;
+    top: 10vw;
+    margin-left: 20px;
+    font-size: 5vw;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+#cuadrofondo{
+    width: 80vw;
+    height: 75vw;
+    padding-left: 10vw;
+    padding-top: 1vw;
+    position: absolute;
+    top: 25vw;
+}
+
+.botones2{
+    text-align: center;
+    position: absolute;
+    display: flex;
+    top: 3vw;
+    left: 67vw;
+    z-index: 2;
+}
+
+#botonRepetir, #botonMenu {
+    margin: 0vw 0vw;
+}
+
+.letras{
+    position: absolute;
+    top: 45vw;
+    left: -15vw;
+    width: 80%;
+}
+
+.letrasIncorrectas{
+    top: 90vw;
+    left: 39vw;
+}
+
+.teclado{
+    position: absolute;
+    display: flex;
+    top: 118vw;
+    width: 67.5%;
+    text-align: center;
+    left: 17vw;
+}
+
+.dibujo {
+    width: 80%;
+    height: 50vw;
+    top: 26vw;
+    left: 10vw;
+}
+
+.img0,.img1,.img2,.img3,.img4,.img5,.img6,.img7{
+    width: 35vw;
+    top: 7vw;
+    left: 23vw;
+    
+}
+
+.img7{
+    width: 65vw;
+    left: 5vw;
+    top: 1vw;
+}
+
+#videoPerdiste{
+    width: 35vw;
+    left: 1vw;
+    top: 3vw;
+}
+
+.palabraPerdiste{
+    font-size: 5vw;
+    left: 4.5vw;
+}
+
+.plantilla{
+    top: 0vw;
+}
+
+.audIcon{
+    width: 12vw;
+    left: 46vw;
+    top: 89vw;
+}
+
+.audIcon:hover{
+    width: 4.3vw;
+    opacity: 1;
+}
+
+#muteIcon{
+    display: none;
+}
+}
+
+/*Página Agregar Palabra*/
+
+#cuadrofondoPalabra{
+    width: 80vw;
+    height: 60vw;
+    padding-top: 1vw;
+    z-index: 2;
+    top: 60vw;
+    position: absolute;
+    left: 10vw;
+}
+
+.areaNuevapalabra{
+    margin: 10vw 10vw;
+    width: 80vw;
+    height: 25vw;
+    position: absolute;
+    top: 64vw;
+    z-index: 3;
+    text-align: center;
+}
+
+.nuevaPalabra{
+    display: none;
+}
+
+#tituloNp{
+    font-size: 7vw;
+    color: #FFFFFF;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    margin-bottom: 2vw;
+}
+
+.btnNuevaPalabra{
+    width: 35vw;
+    padding: 0.4vw 3vw;
+    border-radius: 20px;
+    border-style: none;
+    background-color: rgba(114, 113, 113, 0.719);
+    font-family: "Palatino LT";
+    color: #FFFFFF;
+    font-size:6vw;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    margin-top: 2vw;
+}
+
+.indicacion{
+    font-size: 4vw;
+}
+
+#addPalabra{
+    font-size: 5vw;
+    margin: 2vw 0;
+    padding: 2vw 6vw;
+    border-style: none;
+    border-radius: 6vw;
+    background-color: #C2C2C2;
+    width: auto;
+}
