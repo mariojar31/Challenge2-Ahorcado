@@ -14,7 +14,7 @@ var teclas = document.querySelector(".teclas");
 let tablero = document.getElementById("ahorcado").getContext("2d");
 var letrasDOM = document.querySelector(".letras")
 
-var palabras=["OLA","CUARTO","PELOTA","TORRE","FUERZA","FUERTE","CURA","HOMBRE","NOTA","LOCAL","VISTA","RANGO","HOTEL"];
+var palabras=["OLA","CUARTO","PELOTA","TORRE","FUERZA","FUERTE","CURA","HOMBRE","NOTA","LOCAL","VISTA","RANGO","HOTEL","MUJER","PAIS","PROGRAMA","RATON","USUARIO","CANCION","ONDA","ESPECIE","BORRACHO"];
 var letrasPermitidas="QWERTYUIOPASDFGHJKLZXCVBNM";
 var palabraSecreta="";
 var palabraElejida="";
