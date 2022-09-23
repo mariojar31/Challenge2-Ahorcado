@@ -194,7 +194,7 @@ footer{
 .letras{
     font-family: "Palatino LT";
     font-weight: bold;
-    font-size: 250%;
+    font-size: 180%;
     color: #ffffff;
     width: 50%;
     padding: 2% 25% 0.5% 25%;
@@ -202,7 +202,7 @@ footer{
 .letra{
     display: inline-block;
     text-align: center;
-    width: 10%;
+    width: 8.3%;
     height:100%; 
 }
 .letra p{
@@ -395,7 +395,7 @@ footer{
     text-align: center;
     position: absolute;
     top: calc(150vw);
-    left: 28vw;
+    left: 34vw;
 }
 
 .logosfoot{
@@ -406,7 +406,7 @@ footer{
 .footertext{
     color: #918F8F;
     margin-top: 1vw;
-    font-size: 4vw;
+    font-size: 3vw;
 }
 
 #logogit,#logolinked{
