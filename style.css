@@ -519,7 +519,7 @@ footer{
 #muteIcon{
     display: none;
 }
-}
+
 
 /*Página Agregar Palabra*/
 
@@ -579,4 +579,6 @@ footer{
     border-radius: 6vw;
     background-color: #C2C2C2;
     width: auto;
+}
+
 }
