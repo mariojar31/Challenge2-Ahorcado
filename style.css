@@ -353,6 +353,14 @@ footer{
         width: 100%;
         z-index: -1;
     }
+    
+    .videoFondo{
+        display:none;
+    }
+    .videoFondo-movil{
+        display:block;
+        width: 100vw;
+    }
 
     .tituloJuego{
         width: 75vw;
