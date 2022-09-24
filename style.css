@@ -19,6 +19,10 @@ body{
     display: none;
 }
 
+.videoFondo{
+    width: 100vw;
+}
+
 .menuInicial{
     text-align: center;
     position: relative;
